@@ -1,0 +1,13 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 18px;
+
+}
+.github{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}

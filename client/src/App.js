@@ -3,7 +3,7 @@ import {BrowserRouter as Router , Route,Routes} from "react-router-dom"
 import Home from './Pages/Home/Home';
 import Paintings from './Pages/Paintings/Paintings';
 import Artist from './Pages/Artists/Artist';
-import Drwaings from './Pages/Drawings/Drwaings';
+import Viewinroom from './Pages/Viewinroom/Viewinroom';
 function App() {
   return (
     <Router>
@@ -11,7 +11,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/Paintings' element={<Paintings/>}/>
         <Route path='/Artist' element={<Artist/>}/>
-        <Route path='/Drawings' element={<Drwaings/>}/>
+        <Route path='/viewinroom/:imageUrl' element={<Viewinroom/>}/>
       </Routes>
     </Router>
   );

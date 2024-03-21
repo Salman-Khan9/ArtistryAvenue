@@ -1,9 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import Navbar from '../../Components/Navbar/Navbar';
+import axios from 'axios';
+import Footer from '../../Components/Footer/Footer';
+import './Artist.css'; // Import CSS file for component styling
 
 const Artist = () => {
-  return (
-    <div>Artist</div>
-  )
-}
+  const [data, setData] = useState([]);
 
-export default Artist
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/artist", { withCredentials: true });
+        setData(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <Navbar />
+
+      <div className="artist-container">
+        {data.map((artist, index) => (
+          <div key={index} className="artist-card">
+            <img className="artist-image" src={artist.imageurl} alt="Loading..." />
+            <div className="artist-details">
+              <div className="artist-name">{artist.artistname}</div>
+              <div className="artist-info">{artist.Dob}</div>
+              <div className="about-artist">{artist.aboutartist}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Artist;

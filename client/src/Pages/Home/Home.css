@@ -1,0 +1,9 @@
+.paintings{
+    display: flex;
+}
+.heading-1{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 400;
+}

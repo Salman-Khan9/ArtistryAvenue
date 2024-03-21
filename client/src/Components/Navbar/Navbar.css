@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 25px; /* Adjust size as needed */
+     font-weight: 700;
+     margin-left: 50PX;
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+  
+  .list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 100px;
+  }
+  
+  .tags {
+  font-size: 15px;
+  font-weight: 400;
+    margin-left: 20px; /* Adjust spacing between tags */
+  }
+  .tags:hover{
+    font-size:18PX;
+    font-weight: 600;
+
+  }
+  
+  
+  
