@@ -1,60 +1,88 @@
-
-
-.roomimage-container {
-  width: 100%;
+.viewimage-body{
   height: 100vh;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRYeijo-5KEOoUXGTzqTq55zghG-YgvudjBQ&usqp=CAU");
+  background-color: #f4f4f4;
+}
+.roomimage-container {
+  position: relative;
+  left: 400px; /* Adjust this according to your layout */
+  top: 100px; /* Adjust this according to your layout */
+  width: 800px; /* Adjust this according to your layout */
+  transform: translateX(-20%);
+
 }
 
-.roomimage {
+.roomimage-container img:first-child {
   width: 100%;
-  height: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.painting-container {
+.roomimage-container img:last-child {
+  position: absolute;
+  height: 35%;
+  width: 20%; /* Adjust as needed */
+  max-width: 210px;
   
+  top: 8%; /* Adjust as needed */
+  left: 40%; /* Adjust as needed */
 }
 
-.painting {
-  height: 300px;
-  width: 300px;
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 1200px) {
+  .roomimage-container {
+    width: 600px; /* Adjust as needed for smaller screens */
+    transform: translateX(-40%);
+  
+  }
+  .roomimage-container img:last-child {
+    width: 14%; /* Adjust as needed */
+  
+  max-width: 115px;
+  top: 5%; /* Adjust as needed */
+  left: 43%;
+  }
 }
 
-@media only screen and (max-width: 580px) { /* Adjusted max-width */
-  .painting-container {
-    height: calc(100vh - 300px); /* Keep the same height as original */
+@media only screen and (max-width: 992px) {
+  .roomimage-container {
+    width: 400px; /* Adjust as needed for smaller screens */
+    transform: translateX(-60%);
+  
+  }
+  .roomimage-container img:last-child {
+    width: 15%; /* Adjust as needed */
+  max-width: 120px;
+  top: 5%; /* Adjust as needed */
+  left: 43%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .roomimage-container {
+   
+    width: 300px; /* Adjust as needed for smaller screens */
+    transform: translateX(-80%);
+        
+
+  }
+  .roomimage-container img:last-child {
+    width: 15%; /* Adjust as needed */
+  max-width: 110px;
+  top: 5%; /* Adjust as needed */
+  left: 43%;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .roomimage-container {
-    background-size: 100%;
-    background-position: center;
+    width: 250px; /* Adjust as needed for smaller screens */
+    left: 50%; /* Center the container horizontally */
+    transform: translateX(-50%);
   }
-  .roomimage {
-    width: 100%;
-    height: 100%;
-  }
-
-  .painting {
-    height: 100px;
-    width: 100px;
-  }
-
-  .painting-container {
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .roomimage-container {
-    background-size: 100%;
-    background-position: center;
-  }
-  .roomimage {
-    width: 100%;
-    height: 100%;
-  }
-
-  .painting-container {
+  .roomimage-container img:last-child {
+    width: 14%; /* Adjust as needed */
+  max-width: 115px;
+  top: 5%; /* Adjust as needed */
+  left: 43%;
   }
 }
