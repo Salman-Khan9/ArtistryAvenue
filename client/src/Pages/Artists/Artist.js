@@ -5,12 +5,14 @@ import Footer from '../../Components/Footer/Footer';
 import './Artist.css'; // Import CSS file for component styling
 
 const Artist = () => {
+  const backendurl = process.env.REACT_APP_BACKEND_URL
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/artist", { withCredentials: true });
+        const response = await axios.get(`${backendurl}artist`, { withCredentials: true });
         setData(response.data);
       } catch (error) {
         console.log(error);
@@ -18,7 +20,7 @@ const Artist = () => {
     };
 
     fetchData();
-  }, []);
+  }, [backendurl]);
 
   return (
     <div>

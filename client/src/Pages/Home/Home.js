@@ -49,7 +49,7 @@ const backendurl = process.env.REACT_APP_BACKEND_URL
   useEffect(() => {
     const fetchdata =async()=>{
       try {
-        const data = await axios.get(`http://localhost:5000/art`,{withCredentials:true})
+        const data = await axios.get(`${backendurl}/art`,{withCredentials:true})
         dispatch(set_artdata(data.data))
       } catch (error) {
         console.log(error)
@@ -59,7 +59,7 @@ const backendurl = process.env.REACT_APP_BACKEND_URL
     
   }, [backendurl,dispatch])
   const Artdata = useSelector(selectartdata)
-  console.log(Artdata)
+  
   return (
     <div>
       <Navbar></Navbar>
