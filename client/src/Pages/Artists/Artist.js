@@ -12,7 +12,7 @@ const Artist = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${backendurl}artist`, { withCredentials: true });
+        const response = await axios.get(`${backendurl}/artist`, { withCredentials: true });
         setData(response.data);
       } catch (error) {
         console.log(error);
