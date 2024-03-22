@@ -6,7 +6,7 @@ const route = require("./Routes/Artistroutes")
 const dotenv = require("dotenv").config()
 const app = express()
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://artistry-avenue.vercel.app",
     credentials:true
 
 }))
