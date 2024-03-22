@@ -36,14 +36,12 @@
     .navbar {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       padding: 10px 20px;
     }
     
     .logo {
       font-size: 20px; /* Adjust size as needed */
        font-weight: 400;
-       margin-right: 30px;
        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
     }
