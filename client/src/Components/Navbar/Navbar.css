@@ -42,6 +42,8 @@
     .logo {
       font-size: 20px; /* Adjust size as needed */
        font-weight: 400;
+       position: relative;
+       right:60px;
        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
     }
