@@ -82,7 +82,7 @@
   .roomimage-container img:last-child {
     width: 14%; /* Adjust as needed */
   max-width: 115px;
-  top: 5%; /* Adjust as needed */
+  top: 10%; /* Adjust as needed */
   left: 43%;
   }
 }
